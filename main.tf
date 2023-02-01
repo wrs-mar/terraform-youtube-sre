@@ -6,5 +6,14 @@ terraform {
     }
 
   }
+}
+
+provider "google" {
+  credentials = var.gcp_auth_file
+  project     = var.project_id
+  region      = var.region
+  zone        = var.main_zone
 
 }
+
+
